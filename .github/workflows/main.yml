@@ -1,0 +1,9 @@
+name: first_workflow
+on: push
+jobs:
+  hello-world-action
+    runs-on: ubuntu-latest
+    steps: 
+      - name: check out repo
+        uses: action/checkout@v3
+      - run: echo "$(cat hello_world.txt)"
